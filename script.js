@@ -1,7 +1,4 @@
-document.getElementById("search").addEventListener("click",function(){
-loadData();
-const mealName = document.getElementById("meal-input").value = '';
-})
+
 const loadData = search =>{
     const mealName = document.getElementById("meal-input").value;
     const searchResults = document.getElementById("search-results");
@@ -12,12 +9,14 @@ const loadData = search =>{
     .catch(error =>{
         const searchDetails = document.getElementById("meal-details");
         const notFoundMessage = `
-        <h4 id= "error"> Sorry! "${mealName}" is not available right now. </h4>
+        <h4 id= "error"> Sorry! "${mealName}" is not available right now.</h4>
         `;
         searchDetails.innerHTML= notFoundMessage;
         const searchResults = document.getElementById("search-results");
         searchResults.innerHTML = ''; 
+        document.getElementById("meal-input").value = '';
     })
+
     const displaySearch = meals =>{
         const mealsArray = meals.meals
         const searchResults = document.getElementById("search-results");
@@ -35,12 +34,13 @@ const loadData = search =>{
             if(errorMessage != null){
                 document.getElementById("error").innerText = "";
             }
+            document.getElementById("meal-input").value = '';
         });
         }         
 }
 
 
-
+// for get details
 const displayDetails = mealID =>{
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`;
     fetch(url)
@@ -55,8 +55,8 @@ const renderDetails = meals =>{
     <img src="${detailsArray.strMealThumb}">
     <h2>${detailsArray.strMeal}</h2>
     <h4> Ingredients: <h4>
-    <ul>
-    <li>${detailsArray.strMeasure1} ${detailsArray.strIngredient1}</li> 
+    <ul id="ing">
+    <li >${detailsArray.strMeasure1} ${detailsArray.strIngredient1}</li> 
     <li>${detailsArray.strMeasure2} ${detailsArray.strIngredient2}</li> 
     <li>${detailsArray.strMeasure3} ${detailsArray.strIngredient3}</li> 
     <li>${detailsArray.strMeasure4} ${detailsArray.strIngredient4}</li> 
@@ -67,11 +67,12 @@ const renderDetails = meals =>{
     <li>${detailsArray.strMeasure9} ${detailsArray.strIngredient9}</li> 
     <li>${detailsArray.strMeasure10} ${detailsArray.strIngredient10}</li> 
     <li>${detailsArray.strMeasure11} ${detailsArray.strIngredient11}</li> 
-      
      </ul>
     </div>
-    `
+    `;
+
 } 
+
 
 
 
