@@ -26,7 +26,7 @@ header{
     }
     #web-name{
         float: left;
-        padding: 10px;
+        color:orange;
     }
     #form-container{
         padding: 20px 200px ;
@@ -37,7 +37,7 @@ header{
         background-color:coral;
         color: white;
     }
-    #search-details{
+    #error{
         text-align: center;
         color: salmon;
         margin-top: 40px;
@@ -45,7 +45,7 @@ header{
     #search-results{
         padding: 100px;
         display: grid;
-        grid-template-columns: repeat(4,4fr);
+        grid-template-columns: repeat(6,4fr);
         grid-gap: 3%;
     }
     .mealDiv a{
@@ -66,4 +66,13 @@ header{
         width: 100%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
+    }
+    #details{
+        margin-top: 40px;
+        display: block;
+        margin-left: 40%;  
+    }
+    #details img{
+        display: block;
+        width: 30%;
     }
