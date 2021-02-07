@@ -55,8 +55,8 @@ const renderDetails = meals =>{
     <img src="${detailsArray.strMealThumb}">
     <h2>${detailsArray.strMeal}</h2>
     <h4> Ingredients: <h4>
-    <ul id="ing">
-    <li >${detailsArray.strMeasure1} ${detailsArray.strIngredient1}</li> 
+    <ul>
+    <li>${detailsArray.strMeasure1} ${detailsArray.strIngredient1}</li> 
     <li>${detailsArray.strMeasure2} ${detailsArray.strIngredient2}</li> 
     <li>${detailsArray.strMeasure3} ${detailsArray.strIngredient3}</li> 
     <li>${detailsArray.strMeasure4} ${detailsArray.strIngredient4}</li> 
@@ -66,11 +66,9 @@ const renderDetails = meals =>{
     <li>${detailsArray.strMeasure8} ${detailsArray.strIngredient8}</li> 
     <li>${detailsArray.strMeasure9} ${detailsArray.strIngredient9}</li> 
     <li>${detailsArray.strMeasure10} ${detailsArray.strIngredient10}</li> 
-    <li>${detailsArray.strMeasure11} ${detailsArray.strIngredient11}</li> 
      </ul>
     </div>
     `;
-
 } 
 
 
