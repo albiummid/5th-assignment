@@ -16,17 +16,12 @@ const loadData = search =>{
         `;
         searchDetails.innerHTML= notFoundMessage;
         const searchResults = document.getElementById("search-results");
-        searchResults.innerHTML = '';
-        const cleanMessage = setInterval(() => {
-            cleanUp();
-        }, 1500);
+        searchResults.innerHTML = ''; 
     })
-
     const displaySearch = meals =>{
         const mealsArray = meals.meals
         const searchResults = document.getElementById("search-results");
         mealsArray.forEach(meal => {
-            // console.log(meal);
             const mealDiv = document.createElement("div");
             mealDiv.className = "mealDiv";
             const mealInfo = `
@@ -36,13 +31,14 @@ const loadData = search =>{
             `;
             mealDiv.innerHTML = mealInfo;
             searchResults.appendChild(mealDiv);
+            const errorMessage = document.getElementById("error")
+            if(errorMessage != null){
+                document.getElementById("error").innerText = "";
+            }
         });
         }         
 }
 
-const cleanUp = clean =>{
-    document.getElementById("error").innerText = "";
-} 
 
 
 const displayDetails = mealID =>{
@@ -54,7 +50,6 @@ const displayDetails = mealID =>{
 const renderDetails = meals =>{
     const mealDetails = document.getElementById("meal-details");
     const detailsArray = meals.meals[0];
-    console.log(meals.meals[0]);
     mealDetails.innerHTML = `
     <div id="details">
     <img src="${detailsArray.strMealThumb}">
