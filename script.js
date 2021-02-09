@@ -66,6 +66,16 @@ const renderDetails = meals =>{
     <li>${detailsArray.strMeasure8} ${detailsArray.strIngredient8}</li> 
     <li>${detailsArray.strMeasure9} ${detailsArray.strIngredient9}</li> 
     <li>${detailsArray.strMeasure10} ${detailsArray.strIngredient10}</li> 
+    <li>${detailsArray.strMeasure11} ${detailsArray.strIngredient11}</li> 
+    <li>${detailsArray.strMeasure12} ${detailsArray.strIngredient12}</li> 
+    <li>${detailsArray.strMeasure13} ${detailsArray.strIngredient13}</li> 
+    <li>${detailsArray.strMeasure14} ${detailsArray.strIngredient14}</li> 
+    <li>${detailsArray.strMeasure15} ${detailsArray.strIngredient15}</li> 
+    <li>${detailsArray.strMeasure16} ${detailsArray.strIngredient16}</li> 
+    <li>${detailsArray.strMeasure17} ${detailsArray.strIngredient17}</li> 
+    <li>${detailsArray.strMeasure18} ${detailsArray.strIngredient18}</li> 
+    <li>${detailsArray.strMeasure19} ${detailsArray.strIngredient19}</li> 
+    <li>${detailsArray.strMeasure20} ${detailsArray.strIngredient20}</li>
      </ul>
     </div>
     `;
