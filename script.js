@@ -55,7 +55,7 @@ const renderDetails = meals =>{
     <img src="${detailsArray.strMealThumb}">
     <h2>${detailsArray.strMeal}</h2>
     <h4> Ingredients: <h4>
-    <ul>
+    <ul id = "ul">
     <li>${detailsArray.strMeasure1} ${detailsArray.strIngredient1}</li> 
     <li>${detailsArray.strMeasure2} ${detailsArray.strIngredient2}</li> 
     <li>${detailsArray.strMeasure3} ${detailsArray.strIngredient3}</li> 
@@ -69,7 +69,22 @@ const renderDetails = meals =>{
      </ul>
     </div>
     `;
+    emptyCleaner();
+        
 } 
+
+const emptyCleaner = () =>{
+    const ul = document.getElementById("ul");
+    console.log(ul.children);
+    const liArray = ul.children;
+    for (let i = 0; i < liArray.length; i++) {
+        const li = liArray[i];
+        const liInnerText = li.innerText;
+        if(liInnerText == ""){
+            li.className="emptyElement"
+        } 
+    }
+}
 
 
 
