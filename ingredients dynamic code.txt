@@ -1,0 +1,24 @@
+ingredients dynamic
+
+
+
+
+
+const renderFoodInfo = (food) => {
+    // Get all ingredients from the object. Up to 20
+    const ingredients = [];
+    for (let i = 1; i <= 20; i++) {
+        if (food[`strIngredient${i}`]) {
+            ingredients.push(`${food[`strIngredient${i}`]} - ${food[`strMeasure${i}`]}`);
+        } else {
+            // Stop if there are no more ingredients
+            break;
+        }
+    }
+    const foodDetailsDiv = document.getElementById('foodsDetails');
+    foodDetailsDiv.innerHTML = `
+    <img cl
+
+
+
+https://monirfy.github.io/hungry-monster/assets/app.js

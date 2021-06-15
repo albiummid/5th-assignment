@@ -85,7 +85,6 @@ const renderDetails = meals =>{
 
 const emptyCleaner = () =>{
     const ul = document.getElementById("ul");
-    console.log(ul.children);
     const liArray = ul.children;
     for (let i = 0; i < liArray.length; i++) {
         const li = liArray[i];
